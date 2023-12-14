@@ -22,5 +22,9 @@ describe("Contar ocurrencias", () => {
     expect(resp.contarPalabras('esta es una prueba - PRUEBA - Prueba')).toEqual({esta: 1, es: 1, una: 1, prueba: 3});
   });
 
+  it("deberia contar las ocurrencias de una palabra separada por comas ", () => {
+    const resp = new ocurrencia();
+    expect(resp.contarPalabras('esta es una prueba, PRUEBA, Prueba')).toEqual({esta: 1, es: 1, una: 1, prueba: 3});
+  });
 
 });
