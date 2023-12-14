@@ -1,5 +1,11 @@
-function sumar(a, b) {
-  return a + b;
+class ocurrencia{
+
+  contarPalabras(frase) {
+    if (frase === '') {
+      return {};
+    }
+  }
+
 }
 
-export default sumar;
+export default ocurrencia;
