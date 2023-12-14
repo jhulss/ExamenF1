@@ -12,5 +12,10 @@ describe("Contar ocurrencias", () => {
     expect(resp.contarPalabras('esta es una prueba')).toEqual({esta: 1, es: 1, una: 1, prueba: 1});
   });
 
+  it("deberia contar las ocurrencias de una palabra aun si la palabra se repite y esta en mayuscula", () => {
+    const resp = new ocurrencia();
+    expect(resp.contarPalabras('esta es una prueba PRUEBA Prueba')).toEqual({esta: 1, es: 1, una: 1, prueba: 3});
+  });
+
 
 });
