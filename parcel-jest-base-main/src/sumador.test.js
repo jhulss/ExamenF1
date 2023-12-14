@@ -6,4 +6,11 @@ describe("Contar ocurrencias", () => {
     const resp = new ocurrencia();
     expect(resp.contarPalabras('')).toEqual({});
   });
+
+  it("deberia devolver un objeto, teniendo como clave cada una de las palabras y el numero de ocurrencias de la misma", () => {
+    const resp = new ocurrencia();
+    expect(resp.contarPalabras('esta es una prueba')).toEqual({esta: 1, es: 1, una: 1, prueba: 1});
+  });
+
+
 });
