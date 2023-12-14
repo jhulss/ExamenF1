@@ -5,7 +5,7 @@ class ocurrencia{
       return {};
     }
 
-    const palabras = frase.toLowerCase().match(/\b\w+\b/g);
+    const palabras = frase.toLowerCase().match(/\b\w+(?:[-',;.]\w+)*\b/g);
     const conteo = {};
   
     palabras.forEach(palabra => {
